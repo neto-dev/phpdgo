@@ -32,8 +32,7 @@ if (defined('YOi_Start') && $YOi_Token == "5ab7b44c0747390658bbf882ae4df1c7") {
               extract($vars);
 
               ob_start();
-
-                 require "views/$template.tpl.php";
+                require "views/$template.tpl.php";
 
               if($layout == "on"){
                  $yield = ob_get_clean();

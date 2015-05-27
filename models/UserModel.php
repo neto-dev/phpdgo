@@ -15,7 +15,7 @@
     {
         $query = $this->consult->getConsultar("
             SELECT *
-            FROM user
+            FROM users
             WHERE $cellComparate = '$value'
         ");
 
@@ -27,13 +27,13 @@
 
     }
 
-    public function create($user, $correo, $values = array())
+    public function create($values = array(), $mensaje)
     {
       extract($values);
       $pass = Security::getEncrypt($password);
       if($this->consult->getConsultar("
               INSERT INTO user
-              (name)
+              (name, age, address)
               VALUES
               ('$name')
           "))

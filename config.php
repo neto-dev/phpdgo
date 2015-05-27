@@ -9,7 +9,7 @@
 		define("DB_HOST", "localhost");
 		define("DB_USER", "root");
 		define("DB_PASS", "root");
-		define("DB_NAME", "name_database");
+		define("DB_NAME", "ejemplo");
 		define("DB_CHAR", "utf8");
 
 	}

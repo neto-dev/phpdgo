@@ -2,10 +2,11 @@
 
 class HomeController{
 
-    public function indexAction($hola="hola")
+    public function indexAction()
     {
       // Controlador principal en esta carpeta crear los demas controladores.
-        return new View("home/index", ["title" => "Framework", "layout" => "on", "nameLayout" => "layout"]);
+    	$token = Security::getEncrypt($GET_["password"]);
+        return new View("home/index", ["title" => "Framework", "layout" => "on", "nameLayout" => "layout", "token" => $token]);
     }
 
 }
